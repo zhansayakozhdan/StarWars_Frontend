@@ -39,7 +39,7 @@ function App() {
   React.useEffect(() => {
     setIsLoading(true);
     axios
-      .get(`http://localhost:5555/planets${terrain ? `/sorting?terrain=${terrain}` : `?`}`)
+      .get(`https://starwars-backend-hpt1.onrender.com/planets${terrain ? `/sorting?terrain=${terrain}` : `?`}`)
       .then((response) => {
         setCollections(response.data.data);
       })
